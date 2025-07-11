@@ -10,6 +10,7 @@ export const fetchProducts = createAsyncThunk(
   }
 );
 
+// Slice de Redux para manejar el estado de productos
 const productsSlice = createSlice({
   name: "products",
   initialState: {
