@@ -48,8 +48,7 @@ const Img = styled.img`
   margin-bottom: 1rem;
 `;
 
-
-
+// Componente funcional que recibe un producto como prop y lo muestra dentro de una tarjeta
 const ProductCard = ({ product }) => {
   return (
     <CardWrapper>
@@ -60,4 +59,5 @@ const ProductCard = ({ product }) => {
   );
 };
 
+// Exportación del componente usando React.memo para evitar renders innecesarios
 export default React.memo(ProductCard);
