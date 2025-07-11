@@ -2,12 +2,12 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import styled from "styled-components";
 import { useDispatch } from "react-redux";
 import { login } from "../features/authSlice";
 import { useNavigate } from "react-router-dom";
 import { Container, FormWrapper, Input, Button, Error } from "../styles/Login";
 
+// Definición del esquema de validación con Yup
 const schema = yup.object().shape({
   username: yup.string().required("El nombre de usuario es obligatorio"),
   password: yup
@@ -20,6 +20,7 @@ const schema = yup.object().shape({
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  // Configuración del formulario con validación usando Yup
   const {
     register,
     handleSubmit,
