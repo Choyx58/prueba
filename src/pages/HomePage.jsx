@@ -3,6 +3,7 @@ import React from "react";
 const HomePage = () => {
   const user = JSON.parse(localStorage.getItem("user"));
 
+  // Función que elimina el usuario del localStorage y recarga la página
   const logout = () => {
     localStorage.removeItem("user");
     window.location.reload();
