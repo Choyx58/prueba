@@ -31,12 +31,14 @@ const Button = styled.button`
   }
 `;
 
+// Componente Header principal
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { toggleTheme, themeMode } = useContext(ThemeContext);
   const user = useSelector((state) => state.auth.user);
 
+  // Función para cerrar sesión
   const handleLogout = () => {
     dispatch(logout());
     navigate("/login");
@@ -60,4 +62,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header; // Exportación del componente para su uso en otras partes
