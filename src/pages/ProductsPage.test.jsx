@@ -13,7 +13,7 @@ import configureMockStore from "redux-mock-store";
 const mockStore = configureMockStore();
 
 
-// 👉 MOCK GLOBAL para IntersectionObserver (evita errores en JSDOM)
+// MOCK GLOBAL para IntersectionObserver (evita errores en JSDOM)
 beforeAll(() => {
   global.IntersectionObserver = class {
     constructor() {}
@@ -23,13 +23,13 @@ beforeAll(() => {
   };
 });
 
-// 👉 MOCK de contexto de tema
+// MOCK de contexto de tema
 const mockThemeContext = {
   themeMode: "light",
   toggleTheme: jest.fn(),
 };
 
-// 👉 Utilidad para renderizar con todos los envoltorios
+// Utilidad para renderizar con todos los envoltorios
 const renderWithProviders = (store) =>
   render(
     <Provider store={store}>
