@@ -77,13 +77,13 @@ const ProductsPage = () => {
     return filtered;
   };
 
+  // Filtrado y ordenamiento memoizado (solo se recalcula cuando cambian dependencias)
   const filteredProducts = useMemo(() => {
   let filtered = [...products];
 
   if (selectedCategory !== "all") {
     filtered = filtered.filter((p) => p.category === selectedCategory);
   }
-
 
   if (orderBy === "price-asc") {
     filtered.sort((a, b) => a.price - b.price);
